@@ -1,0 +1,1 @@
+<?php require realpath(FCPATH . '../ci4_core/app/Config/Paths.php') ?: FCPATH . '../ci4_core/app/Config/Paths.php'; ?>
