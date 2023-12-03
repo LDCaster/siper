@@ -25,6 +25,15 @@
                         <div class="card-header">
                             <h4>TABEL DATA PENATAUSAHAAN BIDANG PERPUSTAKAAN</h4>
                         </div>
+
+                        <div class="col-md-4 mx-2">
+                        <a href="<?= base_url('penatausahaan/createDetailTugas2/' . $id_anggota); ?>"
+                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Tugas penatausahaan">
+                                                    <i class="fa fa-plus"></i> Tambah Tugas utama
+                                                </a>
+                                      <a href="<?= base_url('penatausahaan/showDetail/'. $detail_penatausahaan['id_penatausahaan']); ?>" class="btn btn-sm btn-primary mb-2">Kembali</a>
+                        </div>
+
                         <div class="card-body">
                             <div class="buttons" style="margin-top: -20px;">
                                 <!-- <a href="/penatausahaan/create" class="btn btn-primary">Tambah</a> -->

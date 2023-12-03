@@ -301,10 +301,14 @@ class PenatausahaanController extends BaseController
         $detailtugasModel = new DetailTugasPenatausahaanModel();
         $detailtugas = $detailtugasModel->where('id_anggota', $id_anggota)->getPenatausahaanWithDetailTugas($id_anggota);
         //DISINI TERJADI MASALAH JIKA MEMAKAI FIND ALL MAKA DATA AKAN MUNCUL SESUAI ID TAPI DATA YANG MERUPAKAN TARIKAN TIDAK DAPAT TERTARIK
-    
+        $detail_penatausahaan = $this->detailpenatausahaanModel->find($id_anggota);
+
+
         $data = [
             'title' => 'Detail Penatausahaan',
             'detailtugas' => $detailtugas,
+            'id_anggota' => $id_anggota,
+            'detail_penatausahaan' => $detail_penatausahaan, // Kirim data penatausahaan ke view jika diperlukan
         ];
     
         return view('penatausahaan/showDetailTugas', $data);
@@ -379,10 +383,13 @@ class PenatausahaanController extends BaseController
     {
         $detailtugas2Model = new DetailTugas2PenatausahaanModel();
         $detailtugas2 = $detailtugas2Model->where('id_anggota', $id_anggota)->findAll();
-    
+        $detail_penatausahaan = $this->detailpenatausahaanModel->find($id_anggota);
+
         $data = [
             'title' => 'Detail Penatausahaan',
             'detailtugas2' => $detailtugas2,
+            'id_anggota' => $id_anggota,
+            'detail_penatausahaan' => $detail_penatausahaan, // Kirim data penatausahaan ke view jika diperlukan
         ];
     
         return view('penatausahaan/showDetailTugas2', $data);

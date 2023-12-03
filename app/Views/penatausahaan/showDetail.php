@@ -53,20 +53,11 @@
 
                                                 <td>
                                                 <!-- Tombol "Tambah Detail Anggaran" -->
-                                                <a href="<?= base_url('penatausahaan/createDetailTugas2/' . $penatausahaan['id']); ?>"
-                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Tugas penatausahaan">
-                                                    <i class="fa fa-plus"></i> Tambah Tugas utama
-                                                </a>
 
                                                 <!-- Tombol "Tampil Detail penatausahaan" -->
                                                 <a href="<?= base_url('penatausahaan/showDetailTugas2/' . $penatausahaan['id']); ?>"
                                                     class="btn btn-sm btn-info mb-2" title="Tampil Tugas penatausahaan">
                                                     <i class="fa fa-eye"></i> Tampil Tugas utama
-                                                </a>
-
-                                                <a href="<?= base_url('penatausahaan/createDetailTugas/' . $penatausahaan['id']); ?>"
-                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Tugas penatausahaan">
-                                                    <i class="fa fa-plus"></i> Tambah Tugas 
                                                 </a>
 
                                                 <!-- Tombol "Tampil Detail penatausahaan" -->
