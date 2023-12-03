@@ -60,8 +60,7 @@
                                                 <td><?= $penatausahaan['target']; ?></td>
 
                                             <td>
-                                                
-                                                    <a href="<?= base_url('/penatausahaan/delete/' . $penatausahaan['id']); ?>" class="btn btn-danger mr-2" title="Hapus"> <i class="fa fa-trash"></i>
+                                                    <a href="<?= base_url('/penatausahaan/destroyDetailTugas/' . $penatausahaan['id']); ?>" class="btn btn-danger mr-2" title="Hapus"> <i class="fa fa-trash"></i>
                                                     </a>
                                             </td>  
                                                 

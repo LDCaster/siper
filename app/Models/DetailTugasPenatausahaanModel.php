@@ -27,8 +27,8 @@ class DetailTugasPenatausahaanModel extends Model
             ->join('satuan', 'satuan.id = tugasanggota.id_satuan')
             ->where('anggota.id', $id)
             ->get();
+            return $query->getResultArray();
 
-        return $query->getResultArray();
     }
 
    

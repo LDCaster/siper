@@ -555,37 +555,57 @@ class PenatausahaanController extends BaseController
 
     public function destroydetail($id)
     {
-        // Menghapus data Indikator Kinerja karyawan berdasarkan ID
+        // Menghapus data Detail Penatausahaan berdasarkan ID
         // Gunakan model untuk melakukan penghapusan
+        $deletedDetail = $this->detailpenatausahaanModel->find($id);
         $this->detailpenatausahaanModel->delete($id);
-
-        return redirect()->to('penatausahaan/showDetailTugas');
+    
+        return redirect()->to('/penatausahaan/showDetail/'.$deletedDetail['id_penatausahaan']);
     }
     
     public function destroydetailtugas($id)
     {
-        // Menghapus data Indikator Kinerja karyawan berdasarkan ID
+        // Menghapus data Detail Tugas Penatausahaan berdasarkan ID
         // Gunakan model untuk melakukan penghapusan
-        // $detailtugasModel = new DetailTugasPenatausahaanModel();
-
+        // $detail_penatausahaan = $this->detailpenatausahaanModel->find($id);
+        // dd($detail_penatausahaan);
         $this->detailtugaspenatausahaanModel->delete($id);
-
-
-        return redirect()->to('/penatausahaan');
+    
+        return redirect()->to('/penatausahaan/showDetailTugas/'['id']);
     }
 
+    
     public function destroydetailtugas2($id)
     {
-        // $id_p = $this->request->getVar('id_anggota');
-        // dd($id_p);
-        // Var_dump($id_p);die;
-        // Menghapus data Indikator Kinerja karyawan berdasarkan ID
+        // Menghapus data Detail Tugas 2 Penatausahaan berdasarkan ID
         // Gunakan model untuk melakukan penghapusan
+        $deletedDetail = $this->detailtugas2penatausahaanModel->find($id);
         $this->detailtugas2penatausahaanModel->delete($id);
-
-        return redirect()->to('/penatausahaan');
-        // return redirect()->to('/penatausahaan/showDetailTugas2/'.$id_p);
+    
+        return redirect()->to('/penatausahaan/showDetailTugas2/'.$deletedDetail['id_anggota']);
     }
+
+    public function destroyAnggaran($id)
+{
+    // Menghapus data Indikator Kinerja karyawan berdasarkan ID
+    // Gunakan model untuk melakukan penghapusan
+    $deletedIdPenatausahaan = $this->PenatausahaanAnggaranModel->find($id)['id_penatausahaan'];
+    $this->PenatausahaanAnggaranModel->delete($id);
+
+    return redirect()->to('/penatausahaan/showAnggaran/' . $deletedIdPenatausahaan);
+}
+
+    
+public function destroyKinerjabidang($id)
+{
+    // Menghapus data Kinerja Bidang berdasarkan ID
+    // Gunakan model untuk melakukan penghapusan
+    $deletedIdPenatausahaan = $this->PenatausahaanKinerjabidangModel->find($id)['id_penatausahaan'];
+    $this->PenatausahaanKinerjabidangModel->delete($id);
+
+    return redirect()->to('/penatausahaan/showKinerjabidang/' . $deletedIdPenatausahaan);
+}
+
 }
 
 

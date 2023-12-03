@@ -64,7 +64,7 @@
 
                                             <td>
                                                 
-                                                    <a href="<?= base_url('/penatausahaan/delete/' . $penatausahaan['id']); ?>" class="btn btn-danger mr-2" title="Hapus"> <i class="fa fa-trash"></i>
+                                                    <a href="<?= base_url('/penatausahaan/destroyKinerjabidang/' . $penatausahaan['id']); ?>" class="btn btn-danger mr-2" title="Hapus"> <i class="fa fa-trash"></i>
                                                     </a>
                                             </td>  
                                                 
