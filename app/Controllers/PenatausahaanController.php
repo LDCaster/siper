@@ -440,6 +440,7 @@ class PenatausahaanController extends BaseController
         $data = [
             'title' => 'Detail Penatausahaan',
             'detail' => $detail,
+            'id_penatausahaan' => $id_penatausahaan
         ];
     
         return view('penatausahaan/showAnggaran', $data);

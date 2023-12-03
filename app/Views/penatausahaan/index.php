@@ -63,10 +63,6 @@
 
                                                 <td>
                                                 <!-- Tombol "Tambah Detail Anggaran" -->
-                                                <a href="<?= base_url('penatausahaan/createAnggaran/' . $penatausahaan['id']); ?>"
-                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Data Anggaran penatausahaan">
-                                                    <i class="fa fa-plus"></i> Tambah Data Anggaran
-                                                </a>
 
                                                 <!-- Tombol "Tampil Detail Anggaran" -->
                                                 <a href="<?= base_url('penatausahaan/showAnggaran/' . $penatausahaan['id']); ?>"

@@ -25,6 +25,15 @@
                         <div class="card-header">
                             <h4>TABEL DATA PENATAUSAHAAN BIDANG PENYELENGGARAAN KEARSIPAN</h4>
                         </div>
+
+<div class="col-md-4 mx-2">
+<a href="<?= base_url('penatausahaan/createAnggaran/' . $id_penatausahaan); ?>"
+                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Data Anggaran penatausahaan">
+                                                    <i class="fa fa-plus"></i> Tambah Data Anggaran
+                                                </a>
+                                                <a href="<?= base_url('penatausahaan'); ?>" class="btn btn-sm btn-primary mb-2">Kembali</a>
+</div>
+
                         <div class="card-body">
                             <div class="buttons" style="margin-top: -20px;">
                                 <!-- <a href="/penatausahaan/create" class="btn btn-primary">Tambah</a> -->
