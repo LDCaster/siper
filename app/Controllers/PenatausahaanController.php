@@ -425,7 +425,7 @@ class PenatausahaanController extends BaseController
 
         if ($PenatausahaanAnggaranModel->insert($data)) {
             session()->setFlashdata('pesan', 'Data Berhasil ditambahkan!');
-            return redirect()->to('/penatausahaan');
+            return redirect()->to('/penatausahaan/showAnggaran/'.$data['id_penatausahaan']);
         } else {
             session()->setFlashdata('pesan', 'Data Gagal ditambahkan!');
             return redirect()->back()->withInput();
@@ -489,7 +489,7 @@ class PenatausahaanController extends BaseController
 
         if ($PenatausahaanKinerjabidangModel->insert($data)) {
             session()->setFlashdata('pesan', 'Data Berhasil ditambahkan!');
-            return redirect()->to('/penatausahaan');
+            return redirect()->to('/penatausahaan/showKinerjabidang/'. $data['id_penatausahaan']);
         } else {
             session()->setFlashdata('pesan', 'Data Gagal ditambahkan!');
             return redirect()->back()->withInput();
@@ -504,6 +504,7 @@ class PenatausahaanController extends BaseController
         $data = [
             'title' => 'Detail Penatausahaan',
             'detail' => $detail,
+            'id_penatausahaan' => $id_penatausahaan
         ];
     
         return view('penatausahaan/showKinerjabidang', $data);
