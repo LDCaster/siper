@@ -84,11 +84,6 @@
                                                     <i class="fa fa-eye"></i> Tampil Data Kinerja bidang
                                                 </a>
 
-                                                <a href="<?= base_url('penatausahaan/createDetail/' . $penatausahaan['id']); ?>"
-                                                    class="btn btn-sm btn-primary mb-2" title="Tambah Detail penatausahaan">
-                                                    <i class="fa fa-plus"></i> Tambah Detail
-                                                </a>
-
                                                 <!-- Tombol "Tampil Detail penatausahaan" -->
                                                 <a href="<?= base_url('penatausahaan/showDetail/' . $penatausahaan['id']); ?>"
                                                     class="btn btn-sm btn-info mb-2" title="Tampil Detail penatausahaan">

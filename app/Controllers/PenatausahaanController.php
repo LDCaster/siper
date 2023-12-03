@@ -190,7 +190,6 @@ class PenatausahaanController extends BaseController
     public function storeDetail()
     {
         $detailpenatausahaanModel = new DetailPenatausahaanModel();
-
         $validationRules = [
             'karyawan' => 'required',
             'id_penatausahaan' => 'required',
@@ -208,7 +207,7 @@ class PenatausahaanController extends BaseController
 
         if ($detailpenatausahaanModel->insert($data)) {
             session()->setFlashdata('pesan', 'Data Berhasil ditambahkan!');
-            return redirect()->to('/penatausahaan');
+            return redirect()->to('/penatausahaan/showDetail/'. $data['id_penatausahaan']);
         } else {
             session()->setFlashdata('pesan', 'Data Gagal ditambahkan!');
             return redirect()->back()->withInput();
@@ -223,8 +222,9 @@ class PenatausahaanController extends BaseController
         $data = [
             'title' => 'Detail Penatausahaan',
             'detail' => $detail,
+            'id_penatausahaan' => $id_penatausahaan
         ];
-    
+        
         return view('penatausahaan/showDetail', $data);
     }
 

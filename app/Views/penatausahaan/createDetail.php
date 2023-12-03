@@ -39,7 +39,7 @@
 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                    <a href="<?= base_url('penatausahaan/index'); ?>" class="btn btn-secondary">Kembali</a>
+                                    <a href="<?= base_url('penatausahaan/showDetail/'.$penatausahaan['id']); ?>" class="btn btn-secondary">Kembali</a>
                                 </div>
                             </form>
                             <!-- End form detail anggaran -->
